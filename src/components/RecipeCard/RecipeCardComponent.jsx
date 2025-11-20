@@ -1,9 +1,19 @@
 import "./recipeCard.css";
+import { useNavigate } from "react-router-dom";
 
 export default function RecipeCard({ name, image, cookingTime, rating, ingredients }) {
-    return (
-        <div className="recipe-card">
+    const navigate = useNavigate(); 
 
+    const handleClick = () => {
+        navigate(`/recipe/${encodeURIComponent(name)}`);
+    };
+
+    return (
+        <div
+            className="recipe-card"
+            onClick={handleClick}
+            style={{ cursor: "pointer" }}
+        >
             <div className="recipe-image-wrapper">
                 <img src={image} alt={name} className="recipe-image" />
                 <div className="recipe-title-overlay">
@@ -24,7 +34,6 @@ export default function RecipeCard({ name, image, cookingTime, rating, ingredien
                     </ul>
                 </div>
             </div>
-
         </div>
     );
 }

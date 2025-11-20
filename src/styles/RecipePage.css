@@ -1,0 +1,27 @@
+.recipe-page {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.recipe-page-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 40px;
+}
+
+ul {
+    text-align: left;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+h2 {
+    margin-top: 25px;
+}
