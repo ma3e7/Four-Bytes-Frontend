@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import SignIn from "./components/SignIn/SignInComponent";
 import SignUp from "./components/SignUp/SignUpComponent";
 import RecipePage from "./pages/RecipePage";
+import ReviewPage from "./pages/ReviewPage";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/recipe/:name" element={<RecipePage />} />
+      <Route path="/recipe/:name/add-review" element={<ReviewPage />} />
     </Routes>
 
   );
