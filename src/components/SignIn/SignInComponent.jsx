@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./signin.css";
-import viewIcon from "../../assets/view.png";
+
 import hideIcon from "../../assets/dont_watch.png";
+import viewIcon from "../../assets/view.png";
 
 export default function SignIn({ close }) {
     const [showPass, setShowPass] = useState(false);
@@ -23,7 +24,7 @@ export default function SignIn({ close }) {
                     <div className="password-wrapper">
                         <input type={showPass ? "text" : "password"} />
                         <img
-                            src={showPass ? hideIcon : viewIcon}
+                            src={showPass ? viewIcon : hideIcon}
                             alt="toggle password"
                             className="toggle-pass"
                             onClick={() => setShowPass(!showPass)}

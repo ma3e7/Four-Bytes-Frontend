@@ -24,7 +24,7 @@ export default function SignUp({ close }) {
                     <div className="password-wrapper">
                         <input type={showPass ? "text" : "password"} />
                         <img
-                            src={showPass ? hideIcon : viewIcon}
+                            src={showPass ? viewIcon : hideIcon}
                             alt="toggle password"
                             className="toggle-pass"
                             onClick={() => setShowPass(!showPass)}
@@ -37,7 +37,7 @@ export default function SignUp({ close }) {
                     <div className="password-wrapper">
                         <input type={showConfirmPass ? "text" : "password"} />
                         <img
-                            src={showConfirmPass ? hideIcon : viewIcon}
+                            src={showConfirmPass ? viewIcon : hideIcon}
                             alt="toggle password"
                             className="toggle-pass"
                             onClick={() => setShowConfirmPass(!showConfirmPass)}

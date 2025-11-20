@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignIn from "./components/SignIn/SignInComponent";
 import SignUp from "./components/SignUp/SignUpComponent";
+import BookmarkPage from "./pages/BookmarkPage";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/bookmarks" element={<BookmarkPage />} />
     </Routes>
   );
 }
