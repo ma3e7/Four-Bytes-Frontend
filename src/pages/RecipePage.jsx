@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "../styles/RecipePage.css";
-import { mockRecipes } from "./mockRecipes"; 
+import { mockRecipes } from "./mockRecipes";
 
 export default function RecipePage() {
   const { name } = useParams();
+  const navigate = useNavigate();
   const recipe = mockRecipes.find(r => r.name === decodeURIComponent(name));
 
   if (!recipe) return <p className="loading">Recipe not found.</p>;
@@ -26,6 +27,30 @@ export default function RecipePage() {
 
       <h2>Instructions</h2>
       <p>{recipe.instructions || "No instructions provided."}</p>
+
+      {/* ----------------------- NEW UI ----------------------- */}
+
+      <div className="extra-actions">
+        <h2>Share Your Review</h2>
+        <div>
+        <button
+          className="action-btn"
+          onClick={() => navigate(`/recipe/${encodeURIComponent(name)}/add-review`)}
+        >
+          Write a Review
+        </button>
+        </div>
+        
+        <h2>Your Personal Notes</h2>
+        <div>
+        <button
+          className="action-btn"
+          onClick={() => navigate(`/recipe/${encodeURIComponent(name)}/add-note`)}
+        >
+          Add Notes
+        </button>
+        </div>
+      </div>
     </div>
   );
 }

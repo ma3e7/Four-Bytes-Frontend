@@ -15,7 +15,12 @@ export default function RecipeCard({ name, image, cookingTime, rating, ingredien
             style={{ cursor: "pointer" }}
         >
             <div className="recipe-image-wrapper">
+                
                 <img src={image} alt={name} className="recipe-image" />
+
+
+                  <span className="rating-badge">{rating} ⭐</span> {/* novi badge */}
+
                 <div className="recipe-title-overlay">
                     <h3>{name}</h3>
                 </div>
