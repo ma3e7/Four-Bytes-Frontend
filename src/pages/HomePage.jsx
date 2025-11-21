@@ -28,6 +28,7 @@ export default function HomePage() {
         openSignIn={() => setShowSignIn(true)}
         openSignUp={() => setShowSignUp(true)}
       />
+      
 
       {showSignIn && <SignIn close={() => setShowSignIn(false)} />}
       {showSignUp && <SignUp close={() => setShowSignUp(false)} />}

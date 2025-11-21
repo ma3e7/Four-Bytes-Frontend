@@ -1,0 +1,125 @@
+
+
+.notes-form {
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group select {
+  background: white;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+/* Priority color indicators */
+.form-group select option[value="low"] {
+  color: #22c55e;
+}
+
+.form-group select option[value="medium"] {
+  color: #eab308;
+}
+
+.form-group select option[value="high"] {
+  color: #ef4444;
+}
+
+.form-tips {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-tips h4 {
+  margin: 0 0 0.5rem 0;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.form-tips ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #64748b;
+}
+
+.form-tips li {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .modal-content {
+    margin: 1rem;
+    max-width: none;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .form-group select {
+    max-width: none;
+  }
+}
+
+/* Character count indicator */
+.char-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.char-count.warning {
+  color: #eab308;
+}
+
+.char-count.error {
+  color: #ef4444;
+}
