@@ -1,0 +1,85 @@
+.bookmark-header {
+  text-align: center;
+  padding: 30px 20px 10px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin-bottom: 20px;
+}
+
+.bookmark-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.bookmark-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.bookmark-recipe-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.remove-bookmark-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #dc3545;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.remove-bookmark-btn:hover {
+  background: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+
+.empty-bookmarks {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.empty-bookmarks h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+.empty-bookmarks p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .bookmark-header h1 {
+    font-size: 2rem;
+  }
+  
+  .bookmark-header p {
+    font-size: 1rem;
+  }
+  
+  .remove-bookmark-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+}
