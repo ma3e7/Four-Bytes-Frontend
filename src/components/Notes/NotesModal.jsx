@@ -33,6 +33,7 @@ export default function NotesModal({ isOpen, onClose, onSubmit, recipeName }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        
         <div className="modal-header">
           <h2>Add Notes for {recipeName}</h2>
           <button className="close-btn" onClick={onClose}>×</button>

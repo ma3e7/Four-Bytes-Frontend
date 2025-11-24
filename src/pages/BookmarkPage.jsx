@@ -47,6 +47,7 @@ export default function BookmarkPage() {
   const handleSignOut = () => {
     setIsLoggedIn(false);
     console.log("Sign out pressed.");
+    
   };
 
   const removeFromBookmarks = (recipeId) => {

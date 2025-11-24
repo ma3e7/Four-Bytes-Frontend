@@ -4,9 +4,14 @@ import "../styles/RecipePage.css";
 import { mockRecipes } from "./mockRecipes";
 import ReviewModal from "../components/Review/ReviewComponent";
 import NotesModal from "../components/Notes/NotesModal"
+import Navbar from "../components/NavBar/NavBarComponent";
 
 
 export default function RecipePage() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [showSignIn, setShowSignIn] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
+
   const { name } = useParams();
   const navigate = useNavigate();
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
@@ -28,12 +33,35 @@ export default function RecipePage() {
     setIsReviewModalOpen(false);
   };
 
+  const handleSignOut = () => {
+    setIsLoggedIn(false);
+    console.log("Sign out pressed."); //add here route to homepage onclick=...
+    
+  };
+
   return (
+
+    <div>
+
+      <Navbar
+              isLoggedIn={isLoggedIn}
+              onSignOut={handleSignOut}
+              openSignIn={() => setShowSignIn(true)}
+              openSignUp={() => setShowSignUp(true)}
+            />
+      
+            {showSignIn && <SignIn close={() => setShowSignIn(false)} />}
+            {showSignUp && <SignUp close={() => setShowSignUp(false)} />}
+
     <div className="recipe-page">
+
+      
+
       <img src={recipe.image} alt={recipe.name} className="recipe-page-image" />
+      <div>
+      <h1>{recipe.name}</h1> 
 
-      <h1>{recipe.name}</h1>
-
+    </div>
       <p><strong>Cooking time:</strong> {recipe.cookingTime} min</p>
       <p><strong>Rating:</strong> {recipe.rating}</p>
 
@@ -89,6 +117,7 @@ export default function RecipePage() {
         recipeName={recipe.name}
       />
 
+    </div>
     </div>
   );
 }
