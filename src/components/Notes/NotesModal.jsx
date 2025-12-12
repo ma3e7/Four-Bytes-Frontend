@@ -12,7 +12,7 @@ export default function NotesModal({ isOpen, onClose, onSubmit, recipeName }) {
       alert("Please add some note content");
       return;
     }
-    
+
     const note = {
       title: title.trim() || `Notes for ${recipeName}`,
       content: content.trim(),
@@ -20,7 +20,7 @@ export default function NotesModal({ isOpen, onClose, onSubmit, recipeName }) {
       date: new Date().toLocaleDateString(),
       timestamp: new Date().toISOString()
     };
-    
+
     onSubmit(note);
     setTitle("");
     setContent("");
@@ -39,7 +39,7 @@ export default function NotesModal({ isOpen, onClose, onSubmit, recipeName }) {
         </div>
 
         <form onSubmit={handleSubmit} className="notes-form">
-          
+
 
           <div className="form-group">
             <label htmlFor="note-content">Your Notes: *</label>

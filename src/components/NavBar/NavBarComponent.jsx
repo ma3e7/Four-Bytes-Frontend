@@ -25,4 +25,3 @@ export default function Navbar({ isLoggedIn, onSignOut, openSignIn, openSignUp }
         </nav>
     );
 }
-
